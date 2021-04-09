@@ -120,7 +120,7 @@ def run():
         bob.cmd( 'route add default gw 10.4.4.1 dev bob-eth0' )
         carol.cmd( 'route add default gw 10.6.6.1 dev carol-eth0' )
         
-        bob.cmd( 'ip route add 10.1.1/24 via 10.4.4.1 dev bob-eth0' )
+        bob.cmd( 'route add 10.1.1/24 via 10.4.4.1 dev bob-eth0' )
         carol.cmd( 'route add 10.1.1/24 via 10.6.6.1 dev carol-eth0' )
         carol.cmd( 'route add 10.4.4/24 via 10.6.6.1 dev carol-eth0' )
 
