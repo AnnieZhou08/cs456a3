@@ -2,6 +2,8 @@
 
 (i) Explain what the flow entries that you entered do.
 
+Before entering the flow entries, `h0 ping h1` did not work. It works after flow entries are added; and the following is an explanation of what they do.
+
 Take the first given command for instance:
 ```
 ovs-ofctl -O OpenFlow13 add-flow tcp:127.0.0.1:6634 in_port=1,ip,nw_src=10.0.0.2,nw_dst=10.0.1.2,actions=mod_dl_src:0A:00:0A:01:00:02,mod_dl_dst:0A:00:0A:FE:00:02, output=2
